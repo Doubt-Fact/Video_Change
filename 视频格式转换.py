@@ -6,6 +6,7 @@ from fileinput import filename
 from PyQt5 import QtCore, QtGui, QtWidgets, Qt
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+from PyQt5.QtGui import QIcon
 import ffmpy
 import calendar
 import time
@@ -20,6 +21,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         super(Ui_MainWindow,self).__init__()
         self.setupUi(self)
         self.retranslateUi(self)
+        self.setWindowIcon(QIcon('logo.ico'))
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -35,6 +37,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "音视频转换工具箱-v1.2"))
+
+
         self.pushButton = QtWidgets.QPushButton(self.centralWidget)
         self.pushButton.setGeometry(QtCore.QRect(10, 30, 200, 30))
         self.pushButton.setObjectName("pushButton")
